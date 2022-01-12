@@ -1,13 +1,19 @@
 <template>
   <div id="app">
     {{ $foo }} <br>
-    {{ $myFunction(1, 2)}}
+    {{ $myFunction(1, 2)}} <br>
+    {{ $myMethod('bar') }} <br>
+    <div v-highlight> hello </div>
   </div>
 </template>
 
 <script>
+import Vue from 'vue';
 export default {
   name: 'App',
+  created() {
+    Vue.myGlobalMethod();
+  }
 }
 </script>
 
